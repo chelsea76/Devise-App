@@ -5,7 +5,9 @@ gem 'devise'
 gem 'execjs'
 gem 'therubyracer'
 gem 'debugger'
-
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
