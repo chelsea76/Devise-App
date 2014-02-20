@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_filter :is_signed_in?
-  def is_signed_in?
-    redirect_to new_user_session_path unless user_signed_in?
-  end
+  before_filter :authenticate_user!#:is_signed_in?
+#  def is_signed_in?
+#    redirect_to new_user_session_path unless user_signed_in?
+#  end
   # GET /posts
   # GET /posts.json
   def index

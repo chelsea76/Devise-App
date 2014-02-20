@@ -7,8 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
 <div id="user_nav">
   <% if user_signed_in? %>
     Signed in as <%= current_user.email %>. Not you?
@@ -16,10 +14,9 @@
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
   <% end %>
-    <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
-    <%= link_to "Sign in with Gogle", user_omniauth_authorize_path(:google_oauth2) %>
+    <%#= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
+    <%#= link_to "Sign in with Gogle", user_omniauth_authorize_path(:google_oauth2) %>
 </div>
-
 
 <%= yield %>
 
