@@ -8,6 +8,8 @@ gem 'debugger'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -31,7 +33,7 @@ group :development do
 end
 
 group :production do
-  #gem 'pg'
+  gem 'pg'
 end
 gem 'jquery-rails'
 
