@@ -24,4 +24,15 @@ class OmniauthCallbacksController < ApplicationController
       redirect_to new_user_registration_url
     end
   end
+  
+  def facebook
+    user = User.from_omniauth(request.env["omniauth.auth"])
+    sign_in_and_redirect(:user, user)
+  end
+  
+#  def twitter
+#    debugger
+#    user = User.from_omniauth(request.env["omniauth.auth"])
+#    sign_in_and_redirect(:user, user)
+#  end
 end

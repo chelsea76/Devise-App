@@ -8,6 +8,8 @@ Devise.setup do |config|
 
   config.omniauth :github, '6d6862ef3bbedcaff804', '9399edcb6238e27f34e72297e908a43979d225c5'
   config.omniauth :google_oauth2, '1043451746827-19284if8l9q9bajbktp5dfjlhpc6974f.apps.googleusercontent.com', 'gLC5L3KGZ3h938aLdson2EaH'
+  #config.omniauth :twitter, 'A4i23KTBT0LdLhgjCCkXQ', 'XMmileDsuOCXTdDZJyi3kVt6ukxY9cPsLM5R07LRKtA'
+  config.omniauth :facebook, '578662982210238', '30195d4ca2cb5782d22148a4eb03098c'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
