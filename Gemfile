@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'cancan'
 gem 'rails', '3.2.16'
 gem 'devise'
 gem 'execjs'

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  #load_and_authorize_resource
   before_filter :authenticate_user!#:is_signed_in?
 #  def is_signed_in?
 #    redirect_to new_user_session_path unless user_signed_in?
@@ -19,6 +20,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
 
+   # authorize! :read, @post
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
