@@ -1,0 +1,15 @@
+<table style="width:300px" border ="1" >
+  <thead>
+    <td>Email</td>
+    <td>Provider</td>
+    <td>Role</td>
+  </thead>
+  <tbody>
+    <% @users.each do |user|%>
+    <td><%= user.email%></td>
+    <td><%= user.provider%></td>
+    <td><%= user.role_id%></td>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Posts', posts_path%>

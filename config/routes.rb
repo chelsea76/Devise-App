@@ -2,6 +2,7 @@ DeviseApp::Application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :posts
+  get '/all_users' => "posts#fetch_users", as: :fetch_users
 
 
   # The priority is based upon order of creation:

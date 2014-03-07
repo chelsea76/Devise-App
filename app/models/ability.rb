@@ -11,9 +11,8 @@ class Ability
     #     can :read, :all
     #   end
     user ||= User.new
-    if user.role_id == 1
-      can :manage, :all
-    end
+    can :manage, Post if user.role_id == 1
+    can :manage, User if user.role_id == 2
     # The first argument to `can` is the action you are giving the user 
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions

@@ -13,7 +13,7 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :role_id %><br />
-  <%= f.text_field :role_id %></div>
+  <%= f.select :role_id, options_for_select([["Admin", 1],["Non-Admin", 2]]) %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>

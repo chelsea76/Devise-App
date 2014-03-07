@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   #load_and_authorize_resource
   before_filter :authenticate_user!#:is_signed_in?
+  load_and_authorize_resource :except => [:index, :fetch_users]
 #  def is_signed_in?
 #    redirect_to new_user_session_path unless user_signed_in?
 #  end
@@ -85,5 +86,10 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
+  end
+  
+  def fetch_users
+    @users = User.all
+    authorize! :show, User
   end
 end
