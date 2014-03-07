@@ -90,6 +90,6 @@ class PostsController < ApplicationController
   
   def fetch_users
     @users = User.all
-    authorize! :show, User
+    authorize! :fetch_users, User
   end
 end

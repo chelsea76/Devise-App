@@ -11,8 +11,8 @@ class Ability
     #     can :read, :all
     #   end
     user ||= User.new
-    can :manage, Post if user.role_id == 1
-    can :manage, User if user.role_id == 2
+    can :manage, Post if user.role_id == 2
+    can :fetch_users, User if user.role_id == 1 # custom non-RESTful actions
     # The first argument to `can` is the action you are giving the user 
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
