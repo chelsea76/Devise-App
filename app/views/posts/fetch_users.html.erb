@@ -6,9 +6,11 @@
   </thead>
   <tbody>
     <% @users.each do |user|%>
-    <td><%= user.email%></td>
-    <td><%= user.provider%></td>
-    <td><%= user.role_id%></td>
+    <tr>
+      <td><%= user.email%></td>
+      <td><%= user.provider%></td>
+      <td><%= user.role_id%></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
