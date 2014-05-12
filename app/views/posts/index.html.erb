@@ -1,7 +1,7 @@
 <%= flash[:alert] if flash[:alert]%>
 <h1>Listing posts</h1>
 
-<table>
+<table class="table table-hover">
   <tr>
     <th>Title</th>
     <th>Author</th>
@@ -19,6 +19,7 @@
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Test Dialog', '#', {id: "show"}%>
   </tr>
 <% end %>
 </table>
@@ -29,3 +30,7 @@
 <% if can? :fetch_users, User %>
   <%= link_to 'All Users', fetch_users_path %>
 <% end %>
+<script type="text/javascript">
+
+  
+</script>
