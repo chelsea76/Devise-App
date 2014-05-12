@@ -15,5 +15,4 @@
 //= require jquery.ui.all
 //= require bootstrap
 //= require bootstrap-dropdown
-//= require bootstrap-toggle-buttons
 //= require_tree .
